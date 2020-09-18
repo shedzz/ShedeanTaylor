@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../About me/Css/stylesheet.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    
+
+    <title>Shedean</title>
+</head>
+<body class="Main">
+    <section class="header">
+        <img class=image1 src="../About me/Image/chris53.jpg" alt="Image of shedean">
+        <span class=hero__intro>Hi, I'm Shedean.</span>
+        <span class=hero__intro2>Front-end Developer | Designer</span>
+
+       <!-- <nav>
+            <span class="nav__item item__mod">About </span>
+            <span class="nav__item">Specs </span>
+        </nav>    addition to be link with js-->
+    </section>
+    <section class="aboutMe">
+        <div class="aboutMe__left">
+        <div class="aboutMe__intro">Getting to know me </div>
+        <p class="aboutMe__content">I have started my web-Development journey in at the beginning of 2020. I have done freelancing, consulting and mentorship/influencing through social media platforms</p>
+        </div>
+        <div class="aboutMe__right">
+        <div class="aboutMe__intro2">Why work with me</div>
+        <p class="aboutMe__content2">I have started my web-Development journey in at the beginning of 2020. I have done freelancing, consulting and mentorship/influencing through social media platforms</p>
+        </div>
+
+    </section>
+    <section class="techSkills">
+        <span class="techSkills__intro">Dev Language & Tools use by me</span>
+        <div class="icon">
+        <svg width="12em" height="12em" viewBox="0 0 16 16" class="bi bi-chevron-double-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+        </svg>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <div class="ball1 bounce-1"><h6 style="font-size: 2rem;">HTML5</h6></div>
+              <div class="ball2 bounce-2"><h6 style="font-size: 2rem;">CSS3</h6></div>
+              <div class="ball3 bounce-3"><h6 style="font-size: 2rem;">JS</h6></div>
+              <div class="ball4 bounce-4"><h6 class="padding" style="font-size: 1.7rem;">PENCIL<br>&PAPER</h6></div>
+              <div class="ball5 bounce-5"><h6 style="font-size: 1.7rem;">FIGMA</h6></div>
+              <!--<div class="ball7">GIMP</div>
+            include later. issue with getting the font size for ball1 on the css stylesheet-->
+            </div>
+          </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+        <svg width="12em" height="12em" viewBox="0 0 16 16" class="bi bi-inbox-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3.81 4.063A1.5 1.5 0 0 1 4.98 3.5h6.04a1.5 1.5 0 0 1 1.17.563l3.7 4.625a.5.5 0 0 1-.78.624l-3.7-4.624a.5.5 0 0 0-.39-.188H4.98a.5.5 0 0 0-.39.188L.89 9.312a.5.5 0 1 1-.78-.624l3.7-4.625z"/>
+            <path fill-rule="evenodd" d="M.125 8.67A.5.5 0 0 1 .5 8.5h5A.5.5 0 0 1 6 9c0 .828.625 2 2 2s2-1.172 2-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .496.562l-.39 3.124a1.5 1.5 0 0 1-1.489 1.314H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .121-.393z"/>
+        </svg></span>
+        </div>
+
+    </section>
+    <section class="footer">
+        <span class="footer__intro">Get in touch</span>
+        <span class="footer__intro2">Lets work together</span>
+        
+        <i class='fas fa-envelope-square' style='font-size:40px'></i>
+        <span class="footer__email">: Shedean1@hotmail.com</span>
+
+        <i class='fas fa-phone-square' style='font-size:40px'></i>
+        <span class="footer__phone">: 876-378-8527</span>
+        
+
+    </section>   
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.display = "block";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.display = "none";
+        }
+        </script>
+</body>
+</html>
