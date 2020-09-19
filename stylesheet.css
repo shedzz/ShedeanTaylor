@@ -1,0 +1,630 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 ;
+    min-height: 100vh;
+    font-family: 'Arvo', serif;
+}
+
+.Main{
+    display: grid;
+    grid-template-columns: minmax(100px,1327px);
+    grid-template-rows: 725px 500PX 500px 500px;
+    grid-template-areas: 
+    "header"
+    "aboutMe"
+    "techSkills"
+    "footer"
+    ;
+}
+.header{
+    grid-area: header;
+    background-color:black;
+    color: white;
+    position: relative;
+}
+.image1{
+    background-blend-mode:overlay ;
+    position: absolute;
+    top: 100px;
+    right: 42%;
+    animation:  fade-in 3s;    
+}
+@keyframes fade-in{
+from{
+opacity: 0;
+}
+to{
+opacity: 1;
+}
+}
+
+.hero__intro{
+    opacity: 0;
+    font-size: 2.1rem;
+    margin-left:100px;
+    position: absolute;
+    top: 50px;
+    animation:  slide-in-top 3s 2s;
+    animation-fill-mode: forwards;
+    
+    
+}
+
+/*controls the sliding animation*/
+@keyframes slide-in-top{
+from{
+    opacity: 0;
+transform: translate3d(0, -100%, 0);
+visibility: visible;
+}
+to{
+    opacity: 1;
+transform: translate3d(0, 0, 0);
+}
+}
+.hero__intro2{
+    opacity: 0;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 220px;
+    left: 640px;
+    animation:  fade-in 3s 4s;
+    animation-fill-mode: forwards;
+    
+    
+}
+@keyframes fade-in{
+from{
+opacity: 0;
+}
+to{
+opacity: 1;
+}
+}
+
+
+/*controls the sliding animation
+@keyframes slide-in-right{
+from{
+    color: black;
+    opacity: 0;
+transform: translate3d(-100%, 0, 0);
+}
+to{
+    opacity: 1;
+transform: translate3d(0, 0, 0);
+visibility: visible;
+}
+100%{color: white;
+opacity: 1;}
+}
+---------------------
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2.1rem;    
+    margin-left: 80%;  
+}
+
+.nav__item,
+.item__mod{
+    padding-right: 12px;
+}
+.nav__item:hover{
+    border-top: 1px solid white;
+       
+}
+-------------------
+/*.nav__item:hover{
+    border: 1px solid white;
+    pointer-events: painted;
+}*/
+.aboutMe{
+    grid-area: aboutMe;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.322),white);
+    position: relative;
+}
+.aboutMe__intro, .aboutMe__intro2{
+    font-size: 2.9rem;
+    font-weight: bold;
+
+}
+.aboutMe__content, .aboutMe__content2{
+    max-width: 100%;
+    font-size: 1.3rem;
+}
+.aboutMe__left{
+    max-width: 50%;
+    position: absolute;
+    left: 10px;
+    text-align: center;
+
+}
+.aboutMe__right{
+    max-width: 50%;
+    position: absolute;
+    right: 10px;
+    top: 230px;
+    text-align: center;
+}
+
+.techSkills{
+    grid-area: techSkills;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+.techSkills__intro{
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-left:22%;
+}
+/*
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}*/
+.bi-chevron-double-down{
+    border-top: 1px solid white;
+    position: absolute;
+    right: 45%;
+    top: 160px;
+    height: 80px;
+}
+
+@font-face{
+    src: url(../Fonts/html5_values.ttf);
+    font-family: valve;
+}
+@font-face{
+    src: url(../Fonts/Mechanic_Pencil.ttf);
+    font-family: pencil;
+}
+.ball1{
+    font-family: valve;
+    position: absolute;
+    bottom: 0;
+    left:5%;
+    border-radius: 50%;
+    background-color: orangered;
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-1 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-200px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+h6{
+    padding-top:35px ;
+}
+.padding{
+    padding-top: 17px;
+}
+.ball2{
+    font-family: valve;
+    position: absolute;
+    bottom: 0;
+    left: 25%;;
+    border-radius: 50%;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-2 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-200px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+.ball3{
+    font-family: valve;
+    position: absolute;
+    bottom: 0;
+    left: 45%;;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.534);
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+
+}
+.bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-3 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-200px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(-50); }
+}
+.ball4{
+    font-family: pencil;
+    position: absolute;
+    bottom: 0;
+    left: 65%;
+    border-radius: 50%;
+    background-color: rgb(156, 118, 67);
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+
+}
+.bounce-4 {
+    animation-name: bounce-4;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-4 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-200px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+.ball5{
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    border-radius: 50%;
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+
+}
+.bounce-5 {
+    animation-name: bounce-5;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-5 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-200px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(-50); }
+}
+
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #d41616;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+.bi-inbox-fill{
+    position: absolute;
+    right: 38.8%;
+    top: 230px;
+    height: 100px;
+}
+.bi-inbox-fill:hover{
+    color: grey;
+}
+.footer{
+    grid-area: footer;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.322),white);
+    position: relative;
+}
+.footer__intro, .footer__intro2{
+    font-size: 2.9rem;
+    font-weight: bold;
+
+}
+.footer__intro{
+    position: relative;
+    top: 50px;
+    left: 25px;
+}
+.footer__intro2{
+    position: relative;
+    top: 100px;
+}
+.fa-envelope-square{
+    position: absolute;
+    top: 255px;
+    left: 100px;
+}
+.footer__email{
+    position: absolute;
+    top: 250px;
+    left: 155px;
+    font-size: 2.9rem;
+
+}
+.fa-phone-square{
+    position: absolute;
+    top: 255px;
+    left: 800px;
+
+}
+.footer__phone{
+    position: absolute;
+    top: 250px;
+    left: 855px;
+    font-size: 2.9rem;
+}
+
+
+@media (max-width:1200px){
+    .image1{
+        top: 100px;
+        right: 30%;
+    }
+    .techSkills__intro{
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .footer__intro, .footer__intro2{
+        font-size: 2.9rem;
+        font-weight: bold;
+    
+    }
+    .footer__intro{
+        position: relative;
+        top: 50px;
+        left: 25px;
+    }
+    .footer__intro2{
+        position: relative;
+        top: 100px;
+    }
+    .fa-envelope-square{
+        position: absolute;
+        top: 255px;
+        left: 100px;
+    }
+    .footer__email{
+        position: absolute;
+        top: 250px;
+        left: 155px;
+        font-size: 2.9rem;
+    
+    }
+    .fa-phone-square{
+        position: absolute;
+        top: 335px;
+        left: 100px;
+    
+    }
+    .footer__phone{
+        position: absolute;
+        top: 330px;
+        left: 155px;
+        font-size: 2.9rem;
+    }
+
+}
+@media (max-width:770px){
+    .image1{
+        top: 100px;
+        right: 20%;
+    }
+    .hero__intro2{
+        left: 470px;    
+        font-size: 1rem;    
+        
+    }
+    .aboutMe__left{
+        max-width: 100%;
+        top: 20px;
+        left: 10px;
+        text-align: center;
+    
+    }
+    .aboutMe__right{
+        max-width: 100%;
+        right: 10px;
+        top: 280px;
+        text-align: center;
+    }
+    .techSkills__intro{
+        margin-left:12%;        
+        font-size: 1.8rem;
+    }
+    .bi-chevron-double-down{
+        right: 40%;
+    }
+    .bi-inbox-fill{
+        position: absolute;
+        right: 30%;
+        top: 230px;
+        height: 100px;
+    }
+
+    .footer__intro, .footer__intro2{
+        font-size: 2.5rem;
+        font-weight: bold;
+    
+    }
+    .footer__intro{
+        position: relative;
+        top: 50px;
+        left: 25px;
+    }
+    .footer__intro2{
+        position: absolute;
+        top: 100px;        
+        left: 25px;
+    }
+    .fa-envelope-square{
+        position: absolute;
+        top: 255px;
+        left: 30px;
+    }
+    .footer__email{
+        position: absolute;
+        top: 250px;
+        left: 85px;
+        font-size: 2.3rem;
+    
+    }
+    .fa-phone-square{
+        position: absolute;
+        top: 335px;
+        left: 30px;
+    
+    }
+    .footer__phone{
+        position: absolute;
+        top: 330px;
+        left: 85px;
+        font-size: 2.3rem;
+    }
+
+}
+
+@media (max-width:500px){
+    .image1{
+        top: 100px;
+        right: 5%;
+    }
+    .hero__intro2{
+        top: 500px;
+        left: 30px;
+        font-size: 1.8rem;   
+        
+    }
+    .aboutMe__intro, .aboutMe__intro2{
+        font-size: 2rem;
+        font-weight: bold;
+    
+    }
+    .techSkills__intro{
+        margin-left:0;        
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .bi-chevron-double-down{
+        right: 30%;
+    }
+    .bi-inbox-fill{
+        right: 15%;
+    }
+    .fa-envelope-square{
+        position: absolute;
+        top: 255px;
+        left: 20px;
+    }
+    .footer__email{
+        position: absolute;
+        top: 260px;
+        left: 65px;
+        font-size: 1.3rem;
+    
+    }
+    .fa-phone-square{
+        position: absolute;
+        top: 335px;
+        left: 20px;
+    
+    }
+    .footer__phone{
+        position: absolute;
+        top: 340px;
+        left: 65px;
+        font-size: 1.3rem;
+    }
+
+}
+@media (max-width:396px){
+    .image1{
+        top: 100px;
+        left: 5%;
+    }
+    .bi-chevron-double-down{
+        right: 22%;
+    }
+    .bi-inbox-fill{
+        right: 14%;
+        width:8em;
+    }
+
+}
